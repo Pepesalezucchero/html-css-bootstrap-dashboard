@@ -1,0 +1,99 @@
+/*general page info*/
+main {
+    position: relative;
+}
+
+.ms_nav_bar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 500;
+}
+
+.ms_nav-stick {
+    position: relative;
+}
+
+.ms_container {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.ms_side_bar {
+    margin-top: 60px;
+    width: 80px;
+    height: 100%;
+    background: url(../img/sidebar-bg.png);
+    background-color: #051e34;
+}
+
+.ms_central_container {
+    margin-top: 60px;
+    width: calc(100vw - 80px);
+    height: 100%;
+}
+
+.ms_sm_view {
+    width: 45px;
+}
+
+.ms_lg_view {
+    display: none;
+}
+
+/*navbar*/
+
+.ms_lg_view .ms_logo_mobile {
+    width: 150px;
+    height: 45px;
+}
+
+.ms_nav_bar span, .ms_nav_bar input {
+    background-color: #e5e5e5;
+    border: none;
+}
+
+.ms_icon_pointer {
+    cursor: pointer;
+}
+
+/*sidebar*/
+
+.ms_side_bar_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.ms_side_bar ul, .ms_side_bar a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/*central content*/
+
+/*central content navbar*/
+.ms_main_content_nav_bar {
+    min-height: 150px;
+    background-color: #1b72e8;
+}
+
+@media all and (min-width: 992px) {
+
+    /*general info*/
+    .ms_sm_view {
+        display: none;
+    }
+
+    .ms_lg_view {
+        display: flex;
+    }
+
+    /*sidebar*/
+    .ms_side_bar {
+        width: 160px;
+    }
+
+    .ms_side_bar .ms_lg_view:hover {
+        background-color: #ffffff50;
+    }
+}
