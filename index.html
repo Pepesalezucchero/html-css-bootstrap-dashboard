@@ -8,9 +8,13 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
 
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
         <!--font awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
     </head>
 
@@ -55,17 +59,30 @@
                 <!--sidebar-->
                 <section class="ms_side_bar">
 
-                    <div class="ms_side_bar_container">
+                    <div class="ms_side_bar_container d-flex flex-column justify-content-between">
 
-                        <ul class="mt-3 p-0">
-                            <li class="py-2 px-2 ms_sm_view"><a class="text-white" href="#"><i class="fa-solid fa-house fa-lg me-2" style="color: #ffffff;"></i></a></li>
-                            <li class="py-2 px-2 ms_lg_view"><a class="text-white" href="#"><i class="fa-solid fa-house fa-lg me-2" style="color: #ffffff;"></i> Home</a></li>
-                            <li class="py-2 px-2 ms_sm_view"><a class="text-white" href="#"><i class="fa-solid fa-chart-simple fa-lg me-3" style="color: #ffffff;"></i></a></li>
-                            <li class="py-2 px-2 ms_lg_view"><a class="text-white" href="#"><i class="fa-solid fa-chart-simple fa-lg me-3" style="color: #ffffff;"></i> Stats</a></li>
-                            <li class="py-2 px-2 ms_sm_view"><a class="text-white" href="#"><i class="fa-solid fa-signal fa-lg me-2" style="color: #ffffff;"></i></a></li>
-                            <li class="py-2 px-2 ms_lg_view"><a class="text-white" href="#"><i class="fa-solid fa-signal fa-lg me-2" style="color: #ffffff;"></i> Signals</a></li>
-                        </ul>
-                    
+                        <div>
+                        
+                            <ul class="mt-3 p-0">
+                                <li class="py-2 px-2 ms_sm_view"><a class="text-white" href="#"><i class="fa-solid fa-house fa-lg me-2" style="color: #ffffff;"></i></a></li>
+                                <li class="py-2 px-2 ms_lg_view"><a class="text-white" href="#"><i class="fa-solid fa-house fa-lg me-2" style="color: #ffffff;"></i> Home</a></li>
+                                <li class="py-2 px-2 ms_sm_view"><a class="text-white" href="#"><i class="fa-solid fa-chart-simple fa-lg me-3" style="color: #ffffff;"></i></a></li>
+                                <li class="py-2 px-2 ms_lg_view"><a class="text-white" href="#"><i class="fa-solid fa-chart-simple fa-lg me-3" style="color: #ffffff;"></i> Stats</a></li>
+                                <li class="py-2 px-2 ms_sm_view"><a class="text-white" href="#"><i class="fa-solid fa-signal fa-lg me-2" style="color: #ffffff;"></i></a></li>
+                                <li class="py-2 px-2 ms_lg_view"><a class="text-white" href="#"><i class="fa-solid fa-signal fa-lg me-2" style="color: #ffffff;"></i> Signals</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div>
+
+                            <ul class="mt-3 p-0">
+                                <li class="py-2 px-2 ms_sm_view"><a class="text-white" href="#"><i class="fa-solid fa-gear fa-lg me-2" style="color: #ffffff;"></i></a></li>
+                                <li class="py-2 px-2 ms_lg_view"><a class="text-white" href="#"><i class="fa-solid fa-gear fa-lg me-2" style="color: #ffffff;"></i> Admin</a></li>
+                            </ul>
+
+                        </div>
+
                     </div>
 
                 </section>
@@ -76,24 +93,385 @@
                     <!--nav and stats page-->
                     <section class="ms_main_content_nav_bar">
 
-                        <div class="row">
+                        <div class="ms_container_central_nav">
 
-                            <div class="col-12">
+                            <!--new student section and offcanvas-->
+                            <div class="row">
 
+                                <div class="col-12 col-md-4 col-lg-2 order-md-3 mt-2">
+
+                                    <div class="text-white">Nuovo Studente<button class="btn btn-outline-light ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">+</button></div>
+
+                                </div>
+    
+                                <div class="ms_width offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
                                 
+                                    <div class="offcanvas-header">
+                
+                                    <h5 class="offcanvas-title" id="staticBackdropLabel">Inserisci un nuovo studente</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                
+                                    </div>
+
+                                    <div class="offcanvas-body">
+                
+                                        <form action="#" method="post">
+                  
+                                            <div class="row">
+
+                                                <div class="col-12 col-md-6 col-lg-3 mt-3">
+                  
+                                                    <span class="d-block">Nome</span>
+                                                    <input class="w-100 rounded border border-secondary-subtle ms_input_height" name="name" type="text">
+                  
+                                                </div>
+
+                                                <div class="col-12 col-md-6 mt-3">
+
+                                                    <span class="d-block">Cognome</span>
+                                                    <input class="w-100 rounded border border-secondary-subtle ms_input_height" name="surname" type="text">
+                  
+                                                </div>
+
+                                                <div class="col-12 col-md-6 mt-3">
+
+                                                    <span class="d-block">Email</span> 
+                                                    <div class="input-group">
+                                                        <span class="input-group-text my-0 border-secondary-subtle ms_backgound_color" id="addon-wrapping">@</span>
+                                                        <input type="text" class="form-control my-0 border-secondary-subtle">
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-12 col-md-6 mt-3">
+
+                                                    <span class="d-block">Password</span>
+                                                    <input class="w-100 rounded border border-secondary-subtle ms_input_height" type="password" name="password">
+                                            
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+
+                                                    <span class="d-block">Indirizzo</span>
+                                                    <input class="w-100 rounded border border-secondary-subtle ms_input_height" name="address" type="text">
+
+                                                </div>
+                  
+                                                <div class="col-12 col-md-7 mt-3">
+
+                                                    <span class="d-block">Città</span>
+                                                    <input class="w-100 rounded border border-secondary-subtle ms_input_height" name="city" type="text">
+
+                                                </div>
+
+                                                <div class="col-12 col-md-3 mt-3">
+
+                                                    <span class="d-block">Stato</span>
+                                                    <select name="country" class="form-select border-secondary-subtle" aria-label="Default select example">
+                                                        <option selected>Scegli...</option>
+                                                        <option value="1">Italia</option>
+                                                        <option value="2">Inghilterra</option>
+                                                        <option value="3">Altro...</option>
+                                                    </select>
+
+                                                </div>
+                  
+                                                <div class="col-12 col-md-2 mt-3">
+
+                                                    <span class="d-block">CAP</span>
+                                                    <input class="w-100 rounded border border-secondary-subtle ms_input_height" name="cap" type="text">
+
+                                                </div>
+                  
+                                                <div class="col-12 mt-3">
+
+                                                    <span class="d-block">Foto</span>
+                                                    <div class="input-group mb-3">
+                                                        <button class="btn btn-outline-secondary my-0 border-secondary-subtle ms_backgound_color text-black" type="button" id="button-addon1">Scegli file</button>
+                                                        <input type="text" class="form-control my-0 border-secondary-subtle" placeholder="Nessun file selezionato" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                                    </div>
+
+                                                </div>
+                     
+                                                <div><input type="checkbox" id="accepted" name="accepted"> Seleziona per proseguire</div>
+                                         
+                                                <div>
+
+                                                    <button id="ms_button_color" class="btn btn-primary mt-3 mb-5 border-0">Salva</button>
+                                                    <button id="ms_button_color" class="btn btn-warning mt-3 mb-5 ms-1 border-0">Svuota</button>
+
+                                                </div>
+                  
+                                            </div>
+                  
+                                        </form>
+                                  
+                                    </div>
+
+                                </div>
+
+                                <!--central page navigation-->
+                                <div class="col-12 col-md-4 col-lg-7 order-md-1 mt-2">
+
+                                    <div>
+
+                                        <h4 class="d-inline text-white">Boolean</h4>
+
+                                        <nav class="d-inline" aria-label="breadcrumb">
+
+                                            <ol class="breadcrumb d-inline">
+                                                <li class="breadcrumb-item active d-inline ms-3 rounded-pill bg-black bg-opacity-50 p-1" aria-current="page"><a class="text-white" href="#">Piano blaze</a></li>
+                                            </ol>
+
+                                        </nav>
+
+                                    </div>
+
+                                    <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+
+                                        <ol class="breadcrumb mt-2">
+                                          <li class="breadcrumb-item mt-2"><a class="text-white rounded-pill bg-black bg-opacity-50 py-1 px-2" href="#">3 app</a></li>
+                                          <li class="breadcrumb-item active mt-2 ms_sm_view_central_nav" aria-current="page"><a class="text-white rounded-pill bg-black bg-opacity-50 py-1 px-2" href="#">+</a></li>
+                                          <li class="breadcrumb-item active mt-2 ms_lg_view_central_nav" aria-current="page"><a class="text-white rounded-pill bg-black bg-opacity-50 py-1 px-2" href="#">Boolean mobile app</a></li>
+                                          <li class="mt-2 ms_lg_view_central_nav" aria-current="page"><a class="ms-3 mt-2 text-white rounded-pill bg-black bg-opacity-50 py-1 px-2" href="#">Boolean web app</a></li>
+                                          <li class="mt-2 ms_lg_view_central_nav" aria-current="page"><a class="ms-3 mt-2 text-white rounded-pill bg-black bg-opacity-50 py-1 px-2" href="#">Boolean blog app</a></li>
+                                        </ol>
+
+                                      </nav>
+
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3 order-md-2 mt-2">
+
+                                    <div>
+
+                                        <span class="d-block text-white">Studenti online negli ultimi 30 minuti</span>
+                                        <h4 class="mt-1 text-white">125</h4>
+
+                                    </div>
+
+                                </div>
 
                             </div>
-                            <div class="col-12"></div>
-                            <div class="col-12"></div>
 
                         </div>
 
                     </section>
 
                     <!--main content-->
-                    <sections class="ms_main_content">
+                    <sections class="ms_main_content bg-light d-flex flex-wrap">
 
+                        <div class="ms_main_container_classes_faq mt-3">
 
+                            <!--class table-->
+                            <div class="row gx-0 mb-4 border rounded border-secondary-subtle bg-white">
+
+                                <div class="col-12">
+
+                                    <h4 class="border-bottom border-secondary-subtle py-2 px-2 bg-light-subtle">Prossime classi</h4>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom ps-1 py-2">Nome</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom ms_sm_view_central py-2">Data di inizio</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom ms_sm_view_central py-2">Roi</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2">Stato</div>
+                                        <div class="col-3 col-md-2 text-center border-bottom pe-1 py-2">Azioni</div>
+                
+                                    </div>
+
+                                    <div class="row mx-2 ps-1">
+
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 75</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">15 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-success rounded-pill text-white ms_state_padding">Done</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 76</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">16 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-success rounded-pill text-white ms_state_padding">Done</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 77</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">17 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-warning rounded-pill text-white ms_state_padding">process</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 78</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">18 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-success rounded-pill text-white ms_state_padding">Done</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 79</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">19 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-danger rounded-pill text-white ms_state_padding">failed</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 80</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">20 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-success rounded-pill text-white ms_state_padding">Done</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 81</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">21 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-danger rounded-pill text-white ms_state_padding">failed</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+                
+                                    <div class="row mx-2 ps-1">
+                
+                                        <div class="col-5 col-md-6 border-bottom py-2 ps-1"><img class="rounded-circle" src="img/class-avatar.jpg" alt=""> Classe 82</div>
+                                        <div class="col-2 col-md-2 text-center border-bottom py-2 ms_sm_view_central">22 Feb 2021</div>
+                                        <div class="col-1 col-md-1 text-center border-bottom py-2 ms_sm_view_central">20%</div>
+                                        <div class="col-4 col-md-1 text-center border-bottom py-2"><span class="bg-success rounded-pill text-white ms_state_padding">Done</span></div>
+                                        <div class="col-3 col-md-2 text-center border-bottom py-2 pe-1"><a href="#"><i class="fa-solid fa-pencil fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i><a href="#"><i class="fa-solid fa-trash fa-xs border border-dark border-1 rounded" style="color: #212529;"></a></i></div>
+                
+                                    </div>
+
+                                    <br id="ms_spacing">
+
+                                </div>
+
+                            </div>
+
+                            <!--FAQs-->
+                            <div class="row gx-0 mb-4 border rounded border-secondary-subtle bg-white">
+
+                                <h4 class="border-bottom border-secondary-subtle py-2 px-2 bg-light-subtle">F.A.Q</h4>
+
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                                    <div class="accordion-item">
+
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Come aggiungere un nuovo studente?</button>
+                                        </h2>
+
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Clicca sul + in alto nella sezione blu.*</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="accordion-item">
+
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Come posso accedere alle informazioni del mio account?</button>
+                                        </h2>
+
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Clicca sull'icona della campanella.</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="accordion-item">
+
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Posso usare questa dashboard da mobile?</button>
+                                        </h2>
+
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">S&igrave;.</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <!--todo list-->
+                        <div class="ms_main_container_todo mt-3">
+
+                            <div class="row gx-0 mb-4 border rounded border-secondary-subtle">
+
+                                <h4 class="pt-1 pb-2 ps-2 mb-0 bg-light-subtle">Todo</h4>
+
+                                <div class="col-12 border-top rounded-bottom border-secondary-subtle bg-white">
+
+                                    <div class="my-3">
+
+                                        <div class="mx-3 py-1 ps-3 border rounded-top"><input type="checkbox" id="accepted" name="accepted"> Kickoff nuove classi</div>
+                                        <div class="mx-3 py-1 ps-3 border border-top-0 border-bottom-0"><input type="checkbox" id="accepted" name="accepted"> Lezione su Bootstrap 5 in classe #75</div>
+                                        <div class="mx-3 py-1 ps-3 border rounded-bottom"><input type="checkbox" id="accepted" name="accepted"> Controllare username github studenti</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!--students graphic-->
+                            <div class="row">
+
+                                <div class="col-12">
+
+                                    <div class="col-12 border rounded border-secondary-subtle">
+
+                                        <div class="my-3">
+    
+                                            <div class="mx-3 border rounded border-secondary-subtle">
+
+                                                <img class="w-100" src="img/stats.jpeg" alt="statistiche">
+
+                                                <h5 class="py-2 ps-2 m-0 bg-white">Utenti attivi</h5>
+
+                                                <div class="ps-2 pb-3 bg-white">Lista degli utenti attivi in piattaforma nell'ultimo mese</div>
+                                                 
+                                                <ul class="p-0 m-0">
+                                                    <li class="py-1 ps-2 border-bottom border-top bg-white">Gennaio: 1200</li>
+                                                    <li class="py-1 ps-2 border-bottom bg-white">Febbraio: 800</li>
+                                                    <li class="py-1 ps-2 border-bottom bg-white">Marzo: 1500</li>
+                                                </ul>
+
+                                                <div class="ps-2 py-4 bg-white"><a href="#">Visualizza report approfondito</a></div>
+
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </sections>
 

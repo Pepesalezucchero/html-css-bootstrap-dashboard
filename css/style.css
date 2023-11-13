@@ -1,4 +1,9 @@
 /*general page info*/
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
 main {
     position: relative;
 }
@@ -28,6 +33,7 @@ main {
 }
 
 .ms_central_container {
+    overflow: scroll;
     margin-top: 60px;
     width: calc(100vw - 80px);
     height: 100%;
@@ -38,6 +44,14 @@ main {
 }
 
 .ms_lg_view {
+    display: none;
+}
+
+.ms_sm_view_central_nav {
+    display: inline;
+}
+
+.ms_lg_view_central_nav {
     display: none;
 }
 
@@ -60,11 +74,12 @@ main {
 /*sidebar*/
 
 .ms_side_bar_container {
+    height: calc(100% - 16px);
     width: 70%;
     margin: 0 auto;
 }
 
-.ms_side_bar ul, .ms_side_bar a {
+.ms_side_bar ul, .ms_main_content ul, .ms_side_bar a {
     list-style-type: none;
     text-decoration: none;
 }
@@ -73,8 +88,67 @@ main {
 
 /*central content navbar*/
 .ms_main_content_nav_bar {
-    min-height: 150px;
     background-color: #1b72e8;
+}
+
+.ms_container_central_nav {
+    width: 95%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.ms_width {
+    min-width: 100%;
+}
+ 
+.ms_backgound_color {
+    background-color: #e9ecef;
+}
+
+.ms_input_height {
+    padding: 6px 12px;
+}
+
+.ms_main_content_nav_bar a{
+    text-decoration: none;
+}
+
+/*central main content*/
+.ms_main_container_classes_faq {
+    min-height: 500px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.ms_main_container_todo {
+    min-height: 500px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.ms_main_content img {
+    width: 25px;
+}
+
+.ms_main_content i {
+    padding: 12px 7px;
+    margin-right: 5px;
+}
+
+.ms_state_padding {
+    font-size: 12px;
+    padding: 1px 6px;
+}
+
+.ms_sm_view_central {
+    display: none;
+}
+
+@media all and (min-width:767px) {
+
+    .ms_sm_view_central {
+        display: block;
+    }
 }
 
 @media all and (min-width: 992px) {
@@ -95,5 +169,28 @@ main {
 
     .ms_side_bar .ms_lg_view:hover {
         background-color: #ffffff50;
+    }
+
+    /*nav and stats page*/
+    .ms_width {
+        min-width: 50%;
+    }
+
+    .ms_sm_view_central_nav {
+        display: none;
+    }
+    
+    .ms_lg_view_central_nav {
+        display: inline;
+    }
+
+    .ms_main_container_classes_faq {
+        width: 67.5%;
+        margin: 0 auto;
+    }
+    
+    .ms_main_container_todo {
+        width: 27.5%;
+        margin: 0 auto;
     }
 }
